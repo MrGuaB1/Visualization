@@ -2,9 +2,359 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#dc3745">
+
+    <!-- Primary Meta Tags -->
+    <title>Visualize-Food & Nutrition</title>
+    <link rel="icon" href="./static/img/icon.png" type="image/x-icon">
+    <meta name="title" content="Merry Christmas and Happy New Year ☃️">
+    <meta name="description" content="Merry Christmas and Happy New Year ☃️ Christmas and a new year is about to begin, all good wishes and successes. With ❤️ By Kamran.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metatags.io/">
+    <meta property="og:title" content="Merry Christmas and Happy New Year!">
+    <meta property="og:description" content="Merry Christmas and Happy New Year! Christmas and a new year is about to begin, all good wishes and successes. With ❤️ By Kamran.">
+    <meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:title" content="Merry Christmas and Happy New Year!">
+    <meta property="twitter:description" content="Merry Christmas and Happy New Year! Christmas and a new year is about to begin, all good wishes and successes. With ❤️ By Kamran.">
+    <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="./static/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+
+    <!--=============== JS ===============-->
+    <script src="./static/js/d3.v7.js"></script>
+
 </head>
 <body>
+<!--==================== HEADER ====================-->
+<header class="header" id="header">
+    <nav class="nav container">
+        <a href="#" class="nav__logo">
+            <img src="./static/img/logo.png" alt="logo" class="nav__logo-img">
+            Visualization &nbsp; 全球食品安全与营养状况
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#home" class="nav__link active-link">Cover</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#celebrate" class="nav__link">Celebrate</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#gift" class="nav__link">Gifts</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#new" class="nav__link">New</a>
+                </li>
+            </ul>
+
+            <div class="nav__close" id="nav-close">
+                <i class="bx bx-x"></i>
+            </div>
+
+            <img src="./static/img/nav-light.png" alt="light" class="nav__img">
+        </div>
+
+        <div class="nav__btns">
+            <!--Theme Change-->
+            <i class="bx bx-moon change-theme" id="theme-button"></i>
+
+            <!--Toggle Navigation-->
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="bx bx-grid-alt"></i>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!--==================== MAIN ====================-->
+<main class="main">
+    <!--==================== HOME ====================-->
+    <section class="home" id="home">
+        <div class="home__container container grid">
+            <img src="./static/img/cover.jpg" alt="home" class="home__img" style="margin-right: 50px;">
+
+            <div class="home__data">
+                <h1 class="home__title">
+                    Global Food Security <br /> and Nutrition
+                </h1>
+
+                <p class="home__description">
+                    尽管经过20年来世界各方的努力，全球食品安全和营养状况已经得到很大改善，
+                    但仍然存在很大的挑战。
+                </p>
+
+                <a href="#giving" class="button">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!--==================== GIVING ====================-->
+    <div class="giving section container" id="giving">
+        <h2 class="section__title">
+            Main indicators
+        </h2>
+
+        <div class="giving__container grid">
+            <div class="giving__content">
+                <img src="./static/img/stunting.png" alt="giving" class="giving__img">
+                <h3 class="giving__title">儿童发育迟缓率</h3>
+                <p class="giving__description">截至2021年，全球范围儿童发育迟缓率仍有 5.8%</p>
+            </div>
+
+            <div class="giving__content">
+                <img src="./static/img/death.png" alt="giving" class="giving__img">
+                <h3 class="giving__title">饮食相关死亡率</h3>
+                <p class="giving__description">根据 NCD 风险因素协作组织的测量，全球范围与饮食相关的死亡率高达 12.5%</p>
+            </div>
+
+            <div class="giving__content">
+                <img src="./static/img/food.png" alt="giving" class="giving__img">
+                <h3 class="giving__title">食物不足发生率</h3>
+                <p class="giving__description">据粮农组织统计司统计，2019年全球范围的食物不足发生率为 8.8%</p>
+            </div>
+        </div>
+    </div>
+
+    <!--==================== CELEBRATE ====================-->
+    <section class="celebrate section container" id="celebrate">
+        <div class="celebrate__container grid">
+            <div class="celebrate__data">
+                <h2 class="section__title celebrate__title">
+                    Celebrate With A <br/> Lot of Love
+                </h2>
+
+                <p class="celebrate__description">
+                    In this holidays, celebrate with much love and peace, offering many
+                    blessings to our loved ones, friends and neighbors wishing them
+                    a good Christmas message.
+                </p>
+
+                <a href="#message" class="button">Send Good Wishes</a>
+            </div>
+
+            <img src="./static/img/celebrate.png" alt="celebrate" class="celebrate__img">
+
+        </div>
+    </section>
+
+    <!--==================== GIFT ====================-->
+    <section class="gift section container" id="gift">
+        <h2 class="section__title">
+            Share A Gift
+        </h2>
+
+        <div class="gift__container grid">
+            <article class="gift__card">
+                <img src="./static/img/gift1.png" alt="gift" class="gift__img">
+                <i class="bx bx-heart gift__icon"></i>
+
+                <h3 class="gift__price">$15</h3>
+                <span class="gift__title">Gingerbread</span>
+            </article>
+
+            <article class="gift__card">
+                <img src="./static/img/gift2.png" alt="gift" class="gift__img">
+                <i class="bx bx-heart gift__icon"></i>
+
+                <h3 class="gift__price">$22</h3>
+                <span class="gift__title">Santa Claus Hat</span>
+            </article>
+
+            <article class="gift__card">
+                <img src="./static/img/gift3.png" alt="gift" class="gift__img">
+                <i class="bx bx-heart gift__icon"></i>
+
+                <h3 class="gift__price">$48</h3>
+                <span class="gift__title">Christmas Tree</span>
+            </article>
+
+            <article class="gift__card">
+                <img src="./static/img/gift4.png" alt="gift" class="gift__img">
+                <i class="bx bx-heart gift__icon"></i>
+
+                <h3 class="gift__price">$35</h3>
+                <span class="gift__title">Snowman</span>
+            </article>
+
+            <article class="gift__card">
+                <img src="./static/img/gift5.png" alt="gift" class="gift__img">
+                <i class="bx bx-heart gift__icon"></i>
+
+                <h3 class="gift__price">$12</h3>
+                <span class="gift__title">Candy Stick</span>
+            </article>
+        </div>
+    </section>
+
+    <!--==================== NEW ====================-->
+    <section class="new section container" id="new">
+        <h2 class="section__title">
+            New Gifts
+        </h2>
+
+        <div class="new__container">
+            <div class="swiper new-swiper">
+                <div class="swiper-wrapper">
+                    <article class="new__card swiper-slide">
+                        <div class="new__overlay"></div>
+
+                        <img src="./static/img/new1.png" alt="new-img" class="new__img">
+                        <h3 class="new__price">$95</h3>
+                        <span class="new__title">Reindeer</span>
+
+                        <button class="button new__button">
+                            <i class="bx bx-heart new__icon"></i>
+                        </button>
+                    </article>
+
+                    <article class="new__card swiper-slide">
+                        <div class="new__overlay"></div>
+
+                        <img src="./static/img/new2.png" alt="new-img" class="new__img">
+                        <h3 class="new__price">$20</h3>
+                        <span class="new__title">Snow Globe</span>
+
+                        <button class="button new__button">
+                            <i class="bx bx-heart new__icon"></i>
+                        </button>
+                    </article>
+
+                    <article class="new__card swiper-slide">
+                        <div class="new__overlay"></div>
+
+                        <img src="./static/img/new3.png" alt="new-img" class="new__img">
+                        <h3 class="new__price">$75</h3>
+                        <span class="new__title">Sledge</span>
+
+                        <button class="button new__button">
+                            <i class="bx bx-heart new__icon"></i>
+                        </button>
+                    </article>
+
+                    <article class="new__card swiper-slide">
+                        <div class="new__overlay"></div>
+
+                        <img src="./static/img/new4.png" alt="new-img" class="new__img">
+                        <h3 class="new__price">$15</h3>
+                        <span class="new__title">Christmas Wreath</span>
+
+                        <button class="button new__button">
+                            <i class="bx bx-heart new__icon"></i>
+                        </button>
+                    </article>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!--==================== THANKS ====================-->
+    <section class="home" id="home2">
+        <div class="home__container container grid">
+            <img src="./static/img/home.png" alt="home" class="home__img">
+
+            <div class="home__data">
+                <h1 class="home__title">
+                    Merry Christmas and <br /> Happy New Year!
+                </h1>
+
+                <p class="home__description">
+                    Christmas and a new year is about to begin,
+                    all good wishes and successes.
+                </p>
+
+                <a href="#giving" class="button">Return Top</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!--==================== FOOTER ====================-->
+<footer class="footer section">
+    <div class="footer__container container grid">
+        <div>
+            <a href="#" class="footer__logo">
+                <img src="./static/img/icon.png" alt="logo" class="footer__logo-img">
+                &nbsp; Visualization
+            </a>
+
+            <p class="footer__description">
+                Our achievement about <br/> Food & Nurtrition
+            </p>
+        </div>
+
+        <div>
+            <h3 class="footer__title">Our Services</h3>
+
+            <ul class="footer__links">
+                <li>
+                    <a href="#" class="footer__link">Pricing</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__link">Discounts</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__link">Shipping Mode</a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h3 class="footer__title">Support</h3>
+
+            <ul class="footer__links">
+                <li>
+                    <a href="#" class="footer__link">FAQs</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__link">Support Center</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__link">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h3 class="footer__title">Available On</h3>
+
+            <div class="footer__available">
+                <img src="./static/img/aviable1.png" alt="google-play" class="footer__available-img">
+                <img src="./static/img/aviable2.png" alt="app-store" class="footer__available-img">
+            </div>
+        </div>
+
+        <img src="./static/img/footer1.png" alt="footer-img" class="footer__img1">
+        <img src="./static/img/footer2.png" alt="footer-img" class="footer__img2">
+    </div>
+
+    <span class="footer__copy">
+                &#169; By 16th 碱基互补配队 <br> Sitong Zhang, &nbsp; Na Cheng, &nbsp; Minhao Cao
+            </span>
+</footer>
+
+<!--=============== SCROLL UP ===============-->
+<a href="#" class="scrollup" id="scroll-up">
+    <i class="bx bx-up-arrow-alt scrollup__icon"></i>
+</a>
+
+<!--=============== JS ===============-->
+<script src="./static/js/scrollreveal.min.js"></script>
+<script src="./static/js/swiper-bundle.min.js"></script>
+<script src="./static/js/index.js"></script>
 
 </body>
 </html>
