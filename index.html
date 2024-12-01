@@ -32,7 +32,6 @@
 
     <!--=============== JS ===============-->
     <script src="./static/js/d3.v7.js"></script>
-
 </head>
 <body>
 <!--==================== HEADER ====================-->
@@ -49,13 +48,13 @@
                     <a href="#home" class="nav__link active-link">Cover</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#celebrate" class="nav__link">Celebrate</a>
+                    <a href="#celebrate" class="nav__link">Trend</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#gift" class="nav__link">Gifts</a>
+                    <a href="#gift" class="nav__link">Reason</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#new" class="nav__link">New</a>
+                    <a href="#new" class="nav__link">Needs</a>
                 </li>
             </ul>
 
@@ -100,7 +99,7 @@
         </div>
     </section>
 
-    <!--==================== GIVING ====================-->
+    <!--==================== TREND ====================-->
     <div class="giving section container" id="giving">
         <h2 class="section__title">
             Main indicators
@@ -126,139 +125,87 @@
             </div>
         </div>
     </div>
+    <div class="giving section container" id="celebrate">
+        <h2 class="section__title">
+            Global Trend Past 20 Years <br> About Malnutrition
+        </h2>
+        <div id="hunger" style="width: 1000px;height: 400px; margin-left: 100px;"></div>
+        <script src="static/js/Charts/race.js"></script>
 
-    <!--==================== CELEBRATE ====================-->
-    <section class="celebrate section container" id="celebrate">
-        <div class="celebrate__container grid">
-            <div class="celebrate__data">
-                <h2 class="section__title celebrate__title">
-                    Celebrate With A <br/> Lot of Love
-                </h2>
+    </div>
 
-                <p class="celebrate__description">
-                    In this holidays, celebrate with much love and peace, offering many
-                    blessings to our loved ones, friends and neighbors wishing them
-                    a good Christmas message.
-                </p>
 
-                <a href="#message" class="button">Send Good Wishes</a>
-            </div>
-
-            <img src="./static/img/celebrate.png" alt="celebrate" class="celebrate__img">
-
-        </div>
-    </section>
-
-    <!--==================== GIFT ====================-->
+    <!--==================== REASON ====================-->
     <section class="gift section container" id="gift">
         <h2 class="section__title">
-            Share A Gift
+            Attribution of malnutrition <br> by age group
         </h2>
 
-        <div class="gift__container grid">
-            <article class="gift__card">
-                <img src="./static/img/gift1.png" alt="gift" class="gift__img">
-                <i class="bx bx-heart gift__icon"></i>
-
-                <h3 class="gift__price">$15</h3>
-                <span class="gift__title">Gingerbread</span>
-            </article>
-
-            <article class="gift__card">
-                <img src="./static/img/gift2.png" alt="gift" class="gift__img">
-                <i class="bx bx-heart gift__icon"></i>
-
-                <h3 class="gift__price">$22</h3>
-                <span class="gift__title">Santa Claus Hat</span>
-            </article>
-
-            <article class="gift__card">
-                <img src="./static/img/gift3.png" alt="gift" class="gift__img">
-                <i class="bx bx-heart gift__icon"></i>
-
-                <h3 class="gift__price">$48</h3>
-                <span class="gift__title">Christmas Tree</span>
-            </article>
-
-            <article class="gift__card">
-                <img src="./static/img/gift4.png" alt="gift" class="gift__img">
-                <i class="bx bx-heart gift__icon"></i>
-
-                <h3 class="gift__price">$35</h3>
-                <span class="gift__title">Snowman</span>
-            </article>
-
-            <article class="gift__card">
-                <img src="./static/img/gift5.png" alt="gift" class="gift__img">
-                <i class="bx bx-heart gift__icon"></i>
-
-                <h3 class="gift__price">$12</h3>
-                <span class="gift__title">Candy Stick</span>
-            </article>
-        </div>
+        <div id="reason" style="width:100%;"></div>
+        <script src="static/js/Charts/reason.js"></script>
     </section>
 
-    <!--==================== NEW ====================-->
+    <!--==================== NEEDS ====================-->
     <section class="new section container" id="new">
         <h2 class="section__title">
-            New Gifts
+            Global Food Demand <br> And Needs
         </h2>
 
-        <div class="new__container">
-            <div class="swiper new-swiper">
-                <div class="swiper-wrapper">
-                    <article class="new__card swiper-slide">
-                        <div class="new__overlay"></div>
+<!--        <div class="new__container">-->
+<!--            <div class="swiper new-swiper">-->
+<!--                <div class="swiper-wrapper">-->
+<!--                    <article class="new__card swiper-slide">-->
+<!--                        <div class="new__overlay"></div>-->
 
-                        <img src="./static/img/new1.png" alt="new-img" class="new__img">
-                        <h3 class="new__price">$95</h3>
-                        <span class="new__title">Reindeer</span>
+<!--                        <img src="./static/img/new1.png" alt="new-img" class="new__img">-->
+<!--                        <h3 class="new__price">$95</h3>-->
+<!--                        <span class="new__title">Reindeer</span>-->
 
-                        <button class="button new__button">
-                            <i class="bx bx-heart new__icon"></i>
-                        </button>
-                    </article>
+<!--                        <button class="button new__button">-->
+<!--                            <i class="bx bx-heart new__icon"></i>-->
+<!--                        </button>-->
+<!--                    </article>-->
 
-                    <article class="new__card swiper-slide">
-                        <div class="new__overlay"></div>
+<!--                    <article class="new__card swiper-slide">-->
+<!--                        <div class="new__overlay"></div>-->
 
-                        <img src="./static/img/new2.png" alt="new-img" class="new__img">
-                        <h3 class="new__price">$20</h3>
-                        <span class="new__title">Snow Globe</span>
+<!--                        <img src="./static/img/new2.png" alt="new-img" class="new__img">-->
+<!--                        <h3 class="new__price">$20</h3>-->
+<!--                        <span class="new__title">Snow Globe</span>-->
 
-                        <button class="button new__button">
-                            <i class="bx bx-heart new__icon"></i>
-                        </button>
-                    </article>
+<!--                        <button class="button new__button">-->
+<!--                            <i class="bx bx-heart new__icon"></i>-->
+<!--                        </button>-->
+<!--                    </article>-->
 
-                    <article class="new__card swiper-slide">
-                        <div class="new__overlay"></div>
+<!--                    <article class="new__card swiper-slide">-->
+<!--                        <div class="new__overlay"></div>-->
 
-                        <img src="./static/img/new3.png" alt="new-img" class="new__img">
-                        <h3 class="new__price">$75</h3>
-                        <span class="new__title">Sledge</span>
+<!--                        <img src="./static/img/new3.png" alt="new-img" class="new__img">-->
+<!--                        <h3 class="new__price">$75</h3>-->
+<!--                        <span class="new__title">Sledge</span>-->
 
-                        <button class="button new__button">
-                            <i class="bx bx-heart new__icon"></i>
-                        </button>
-                    </article>
+<!--                        <button class="button new__button">-->
+<!--                            <i class="bx bx-heart new__icon"></i>-->
+<!--                        </button>-->
+<!--                    </article>-->
 
-                    <article class="new__card swiper-slide">
-                        <div class="new__overlay"></div>
+<!--                    <article class="new__card swiper-slide">-->
+<!--                        <div class="new__overlay"></div>-->
 
-                        <img src="./static/img/new4.png" alt="new-img" class="new__img">
-                        <h3 class="new__price">$15</h3>
-                        <span class="new__title">Christmas Wreath</span>
+<!--                        <img src="./static/img/new4.png" alt="new-img" class="new__img">-->
+<!--                        <h3 class="new__price">$15</h3>-->
+<!--                        <span class="new__title">Christmas Wreath</span>-->
 
-                        <button class="button new__button">
-                            <i class="bx bx-heart new__icon"></i>
-                        </button>
-                    </article>
-                </div>
+<!--                        <button class="button new__button">-->
+<!--                            <i class="bx bx-heart new__icon"></i>-->
+<!--                        </button>-->
+<!--                    </article>-->
+<!--                </div>-->
 
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
+<!--                <div class="swiper-pagination"></div>-->
+<!--            </div>-->
+<!--        </div>-->
     </section>
 
     <!--==================== THANKS ====================-->
@@ -297,17 +244,19 @@
         </div>
 
         <div>
-            <h3 class="footer__title">Our Services</h3>
+            <h3 class="footer__title">Data Origin</h3>
 
             <ul class="footer__links">
                 <li>
-                    <a href="#" class="footer__link">Pricing</a>
+                    <a href="https://globalnutritionreport.org/resources/nutrition-profiles/"
+                       class="footer__link">Nutrition Report</a>
                 </li>
                 <li>
-                    <a href="#" class="footer__link">Discounts</a>
+                    <a href="https://www.fao.org/faostat/zh/#data/FS" class="footer__link">
+                        FAOSTAT</a>
                 </li>
                 <li>
-                    <a href="#" class="footer__link">Shipping Mode</a>
+                    <a href="https://data.who.int/" class="footer__link">WHO</a>
                 </li>
             </ul>
         </div>
@@ -355,6 +304,5 @@
 <script src="./static/js/scrollreveal.min.js"></script>
 <script src="./static/js/swiper-bundle.min.js"></script>
 <script src="./static/js/index.js"></script>
-
 </body>
 </html>
