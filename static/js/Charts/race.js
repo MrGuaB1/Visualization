@@ -1,4 +1,6 @@
 let dataOri = [];
+let replayButton = null;
+
 async function fetchData() {
     try {
         const response = await fetch('http://localhost:8080/data/hunger');
@@ -124,7 +126,6 @@ async function create_hunger_svg() {
 
     const renderChart = () => {
         const bars = chart.selectAll('g.bar').data(dataSlice, (d) => d.name);
-
         let barsEnter;
 
         barsEnter = bars.enter()
@@ -147,13 +148,15 @@ async function create_hunger_svg() {
             .attr('x', '-5')
             .attr('y', barPadding)
             .attr('font-size', 14)
-            .style('text-anchor', 'end');
+            .style('text-anchor', 'end')
+            .style('fill', 'rgb(128, 128, 128)');
 
         barsEnter.append('text')
             .classed('value', true)
             .text(d => d.value.toFixed(1))
             .attr('x', d => scale(d.value) + 10)
-            .attr('y', barPadding);
+            .attr('y', barPadding)
+            .style('fill', 'rgb(128, 128, 128)');
 
         // 更新模式
         bars.transition().duration(duration).ease(d3.easeLinear)
@@ -195,8 +198,20 @@ async function create_hunger_svg() {
                 renderChart();
             } else {
                 ticker.stop();
+                replayButton.style('visibility', 'visible'); // 显示重播按钮
             }
         }, duration);
+    }
+
+    function resetData() {
+        dateIndex = 0;
+        date = getDate();
+        dateTitle.text(date);
+        sliceData();
+        updateAxis();
+        renderAxisLine();
+        renderChart();
+        createTicker();
     }
 
     const init = () => {
@@ -208,6 +223,10 @@ async function create_hunger_svg() {
         renderDateTitle();
         createChart();
         renderChart();
+
+        // 创建重播按钮
+        replayButton = d3.select('#replay')
+            .on('click', resetData);
         createTicker();
     }
 

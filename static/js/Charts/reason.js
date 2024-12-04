@@ -7,7 +7,7 @@ async function fetchData() {
             throw new Error('网络响应不正常');
         }
         reason_data = await response.json();
-        console.log('获取到的 JSON 数据:', reason_data);
+        // console.log('获取到的 JSON 数据:', reason_data);
     } catch (error) {
         console.error('获取数据时发生错误:', error);
     }
@@ -17,7 +17,6 @@ async function create_reason_chart() {
     await fetchData();
     const chart = (() => {
         const data = reason_data;
-        console.log(data.map(d => d.name));
         d3.rollup(data, group => {
             const sum = d3.sum(group, d => d.value);
         }, d => d.name);  // 按照“name”字段将数据分组
@@ -30,7 +29,6 @@ async function create_reason_chart() {
         };
 
         Object.assign(data, additionalInfo);
-        console.log(data);
         const signs = new Map([].concat(data.negatives.map(d => [d, -1]), data.positives.map(d => [d, +1])));
 
         const bias = d3.sort(d3.rollup(data, v => d3.sum(v, d => d.value * Math.min(0, signs.get(d.category))), d => d.name), ([, a]) => a);

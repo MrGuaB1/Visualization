@@ -125,14 +125,19 @@
             </div>
         </div>
     </div>
-    <div class="giving section container" id="celebrate">
+    <div class="giving section container" id="celebrate" style="position: relative;">
         <h2 class="section__title">
             Global Trend Past 20 Years <br> About Malnutrition
         </h2>
+        <svg id="replay" style="position: absolute; right: 200px; top: 115px;"
+             t="1733323297318" class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
+             p-id="4293" width="40" height="40">
+            <path d="M895.1296 485.888a384 384 0 1 0-149.9136 331.2128 25.6 25.6 0 0 1 31.1296 40.6528 435.2 435.2 0 1 1 168.9088-387.328l21.504-21.504a25.6 25.6 0
+            0 1 36.1984 36.1984l-72.3968 72.3968a25.4976 25.4976 0 0 1-36.1984 0l-72.3968-72.3968a25.6 25.6 0 0 1 36.1984-36.1984l36.9664 36.9664z m-225.0752-2.56a35.84 35.84 0 0 1 0 57.344l-177.5104 133.12a35.84 35.84 0 0 1-57.344-28.672V378.88a35.84 35.84 0 0 1 57.344-28.672l177.5104 133.12zM486.4 409.6v204.8l136.5504-102.4L486.4 409.6z" fill="#9DA7B2" p-id="4294"></path>
+        </svg>
         <div id="hunger" style="width: 1000px;height: 400px; margin-left: 100px;"></div>
-        <script src="static/js/Charts/race.js"></script>
-
     </div>
+
 
 
     <!--==================== REASON ====================-->
@@ -140,9 +145,7 @@
         <h2 class="section__title">
             Attribution of malnutrition <br> by age group
         </h2>
-
         <div id="reason" style="width:100%;"></div>
-        <script src="static/js/Charts/reason.js"></script>
     </section>
 
     <!--==================== NEEDS ====================-->
@@ -304,5 +307,10 @@
 <script src="./static/js/scrollreveal.min.js"></script>
 <script src="./static/js/swiper-bundle.min.js"></script>
 <script src="./static/js/index.js"></script>
+
+<!--=============== D3 Charts ===============-->
+<script src="static/js/Charts/race.js"></script>
+<script src="static/js/Charts/reason.js"></script>
+
 </body>
 </html>
