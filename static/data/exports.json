@@ -1,0 +1,338 @@
+{
+    "东非": [
+        {
+            "name": "玉米",
+            "value": 878375.77
+        },
+        {
+            "name": "生咖啡",
+            "value": 714370.7
+        },
+        {
+            "name": "茶叶",
+            "value": 706627.29
+        },
+        {
+            "name": "精制糖",
+            "value": 682426.31
+        },
+        {
+            "name": "非酒精饮料",
+            "value": 561013.0
+        },
+        {
+            "name": "蔗糖",
+            "value": 538709.61
+        },
+        {
+            "name": "豆类",
+            "value": 489217.32
+        },
+        {
+            "name": "Bran of wheat",
+            "value": 465639.49
+        },
+        {
+            "name": "Rice, paddy (rice milled equivalent)",
+            "value": 465471.0
+        },
+        {
+            "name": "大米",
+            "value": 430457.97
+        }
+    ],
+    "中国": [
+        {
+            "name": "预制菜",
+            "value": 2577176.93
+        },
+        {
+            "name": "精米",
+            "value": 2349304.0
+        },
+        {
+            "name": "大米",
+            "value": 2071035.98
+        },
+        {
+            "name": "青蒜",
+            "value": 2035906.85
+        },
+        {
+            "name": "动物油脂",
+            "value": 1635130.09
+        },
+        {
+            "name": "麸质饲料",
+            "value": 1547791.49
+        },
+        {
+            "name": "食品废物",
+            "value": 1199166.0
+        },
+        {
+            "name": "Ice and snow",
+            "value": 1165502.0
+        },
+        {
+            "name": "Vegetables frozen",
+            "value": 1101211.1
+        },
+        {
+            "name": "Fruit prepared n.e.c.",
+            "value": 1097561.08
+        }
+    ],
+    "南非": [
+        {
+            "name": "玉米",
+            "value": 3921498.63
+        },
+        {
+            "name": "橙",
+            "value": 1304811.84
+        },
+        {
+            "name": "蔗糖",
+            "value": 791995.6
+        },
+        {
+            "name": "苹果",
+            "value": 625367.21
+        },
+        {
+            "name": "柠檬和酸橙",
+            "value": 560865.62
+        },
+        {
+            "name": "小麦",
+            "value": 520686.38
+        },
+        {
+            "name": "Tangerines, mandarins, clementines",
+            "value": 474978.46
+        },
+        {
+            "name": "葡萄酒",
+            "value": 439343.33
+        },
+        {
+            "name": "葡萄",
+            "value": 431080.29
+        },
+        {
+            "name": "食品废物",
+            "value": 352322.0
+        }
+    ],
+    "新加坡": [
+        {
+            "name": "预制菜",
+            "value": 343071.31
+        },
+        {
+            "name": "麦芽提取物",
+            "value": 238617.11
+        },
+        {
+            "name": "补充饲料",
+            "value": 201900.0
+        },
+        {
+            "name": "精米",
+            "value": 130914.0
+        },
+        {
+            "name": "大米",
+            "value": 130888.07
+        },
+        {
+            "name": "巧克力",
+            "value": 121029.85
+        },
+        {
+            "name": "Other non-alcoholic caloric beverages",
+            "value": 102233.0
+        },
+        {
+            "name": "Natural rubber in other forms",
+            "value": 75200.0
+        },
+        {
+            "name": "Palm oil",
+            "value": 69547.07
+        },
+        {
+            "name": "Fat preparations n.e.c.",
+            "value": 67513.44
+        }
+    ],
+    "日本": [
+        {
+            "name": "预制菜",
+            "value": 206330.98
+        },
+        {
+            "name": "非酒精饮料",
+            "value": 187176.0
+        },
+        {
+            "name": "麦粉",
+            "value": 165287.18
+        },
+        {
+            "name": "动物油脂",
+            "value": 98254.23
+        },
+        {
+            "name": "麦芽啤酒",
+            "value": 76047.98
+        },
+        {
+            "name": "盐湿猪皮",
+            "value": 64584.0
+        },
+        {
+            "name": "Undenatured ethyl alcohol of an alcoholic strength by volume of less than 80% vol; spirits, liqueurs and other spirituous beverages",
+            "value": 64458.14
+        },
+        {
+            "name": "酱油",
+            "value": 47351.49
+        },
+        {
+            "name": "面点",
+            "value": 39239.36
+        },
+        {
+            "name": "苹果",
+            "value": 37576.45
+        }
+    ],
+    "澳大利亚": [
+        {
+            "name": "小麦",
+            "value": 28781090.41
+        },
+        {
+            "name": "大麦",
+            "value": 8002359.77
+        },
+        {
+            "name": "油菜籽",
+            "value": 5402308.79
+        },
+        {
+            "name": "蔗糖",
+            "value": 2822981.0
+        },
+        {
+            "name": "高粱",
+            "value": 2212137.09
+        },
+        {
+            "name": "苜蓿",
+            "value": 1600649.0
+        },
+        {
+            "name": "Cotton lint, ginned",
+            "value": 1116123.0
+        },
+        {
+            "name": "Lentils, dry",
+            "value": 1045356.06
+        },
+        {
+            "name": "Malt, whether or not roasted",
+            "value": 855934.16
+        },
+        {
+            "name": "Meat of cattle boneless, fresh or chilled",
+            "value": 817401.38
+        }
+    ],
+    "美国": [
+        {
+            "name": "玉米",
+            "value": 58595338.76
+        },
+        {
+            "name": "大豆",
+            "value": 57332027.18
+        },
+        {
+            "name": "小麦",
+            "value": 26917589.34
+        },
+        {
+            "name": "豆饼",
+            "value": 21827860.0
+        },
+        {
+            "name": "高粱",
+            "value": 20206369.48
+        },
+        {
+            "name": "其它饲料产品",
+            "value": 9855380.0
+        },
+        {
+            "name": "Meat of chickens, fresh or chilled",
+            "value": 3745961.91
+        },
+        {
+            "name": "Cotton lint, ginned",
+            "value": 3445820.0
+        },
+        {
+            "name": "Food preparations n.e.c.",
+            "value": 2219691.21
+        },
+        {
+            "name": "Brewing or distilling dregs and waste",
+            "value": 1101109.0
+        }
+    ],
+    "阿富汗": [
+        {
+            "name": "洋葱",
+            "value": 271868.09
+        },
+        {
+            "name": "番茄",
+            "value": 210485.53
+        },
+        {
+            "name": "葡萄",
+            "value": 116233.21
+        },
+        {
+            "name": "黄瓜",
+            "value": 95690.46
+        },
+        {
+            "name": "皮棉",
+            "value": 79983.0
+        },
+        {
+            "name": "干菜豆",
+            "value": 57069.1
+        },
+        {
+            "name": "葡萄干",
+            "value": 46769.58
+        },
+        {
+            "name": "Other fruits, n.e.c.",
+            "value": 38119.43
+        },
+        {
+            "name": "苹果",
+            "value": 29791.23
+        },
+        {
+            "name": "杏",
+            "value": 28579.2
+        }
+    ]
+}

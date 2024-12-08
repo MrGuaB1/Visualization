@@ -65,6 +65,29 @@ app.get('/data/reason', (req, res) => {
         });
 });
 
+app.get('/data/imports', (req, res) => {
+    const jsonFilePath = path.join(__dirname, './static/data/imports.json');
+    fs.readFile(jsonFilePath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading the file:', err);
+            return res.status(500).json({ message: 'Error reading the file' });
+        }
+        res.header('Content-Type', 'application/json');
+        res.send(data);
+    });
+});
+
+app.get('/data/exports', (req, res) => {
+    const jsonFilePath = path.join(__dirname, './static/data/exports.json');
+    fs.readFile(jsonFilePath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading the file:', err);
+            return res.status(500).json({ message: 'Error reading the file' });
+        }
+        res.header('Content-Type', 'application/json');
+        res.send(data);
+    });
+});
 
 // 启动服务器
 app.listen(PORT, () => {

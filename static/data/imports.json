@@ -1,0 +1,338 @@
+{
+    "东非": [
+        {
+            "name": "小麦",
+            "value": 5994440.56
+        },
+        {
+            "name": "精米",
+            "value": 5593581.0
+        },
+        {
+            "name": "大米",
+            "value": 4817318.69
+        },
+        {
+            "name": "棕榈油",
+            "value": 2676540.8
+        },
+        {
+            "name": "精制糖",
+            "value": 2286086.69
+        },
+        {
+            "name": "蔗糖",
+            "value": 1854523.08
+        },
+        {
+            "name": "玉米",
+            "value": 1510953.98
+        },
+        {
+            "name": "Wheat and meslin flour",
+            "value": 847468.04
+        },
+        {
+            "name": "碎米",
+            "value": 730926.53
+        },
+        {
+            "name": "Sunflower-seed oil, crude",
+            "value": 558143.98
+        }
+    ],
+    "中国": [
+        {
+            "name": "大豆",
+            "value": 33849290.69
+        },
+        {
+            "name": "玉米",
+            "value": 29516864.85
+        },
+        {
+            "name": "小麦",
+            "value": 11152599.79
+        },
+        {
+            "name": "高粱",
+            "value": 10192033.63
+        },
+        {
+            "name": "干木薯",
+            "value": 9110160.04
+        },
+        {
+            "name": "稻谷",
+            "value": 8596647.0
+        },
+        {
+            "name": "大麦",
+            "value": 6792630.8
+        },
+        {
+            "name": "Palm oil",
+            "value": 5182659.03
+        },
+        {
+            "name": "Raw cane or beet sugar",
+            "value": 5101196.93
+        },
+        {
+            "name": "Starch of cassava",
+            "value": 4653731.78
+        }
+    ],
+    "南非": [
+        {
+            "name": "小麦",
+            "value": 1826068.14
+        },
+        {
+            "name": "精米",
+            "value": 1038048.0
+        },
+        {
+            "name": "大米",
+            "value": 1024771.45
+        },
+        {
+            "name": "棕榈油",
+            "value": 515221.75
+        },
+        {
+            "name": "蔗糖",
+            "value": 303801.8
+        },
+        {
+            "name": "鸡肉",
+            "value": 290742.62
+        },
+        {
+            "name": "香 蕉",
+            "value": 208783.29
+        },
+        {
+            "name": "食品废物",
+            "value": 189607.0
+        },
+        {
+            "name": "Cake of  soya beans",
+            "value": 183590.0
+        },
+        {
+            "name": "Sunflower-seed oil, crude",
+            "value": 176934.32
+        }
+    ],
+    "新加坡": [
+        {
+            "name": "油脂",
+            "value": 905335.64
+        },
+        {
+            "name": "牛脂肪",
+            "value": 465794.53
+        },
+        {
+            "name": "非酒精饮料",
+            "value": 429333.0
+        },
+        {
+            "name": "精米",
+            "value": 368819.0
+        },
+        {
+            "name": "大米",
+            "value": 348658.7
+        },
+        {
+            "name": "精致糖",
+            "value": 324260.0
+        },
+        {
+            "name": "Food preparations n.e.c.",
+            "value": 302092.17
+        },
+        {
+            "name": "Industrial monocarboxylic fatty acids",
+            "value": 288356.59
+        },
+        {
+            "name": "Ice and snow",
+            "value": 267907.89
+        },
+        {
+            "name": "Meat of chickens, fresh or chilled",
+            "value": 197591.76
+        }
+    ],
+    "日本": [
+        {
+            "name": "玉米",
+            "value": 15271341.09
+        },
+        {
+            "name": "小麦",
+            "value": 5346035.76
+        },
+        {
+            "name": "大豆",
+            "value": 3503251.33
+        },
+        {
+            "name": "棕榈仁饼",
+            "value": 2873314.0
+        },
+        {
+            "name": "其他私聊产品",
+            "value": 2224304.0
+        },
+        {
+            "name": "油菜籽",
+            "value": 2100835.72
+        },
+        {
+            "name": "Cake of  soya beans",
+            "value": 1515575.0
+        },
+        {
+            "name": "大麦",
+            "value": 1235682.0
+        },
+        {
+            "name": "Raw cane or beet sugar",
+            "value": 1053894.91
+        },
+        {
+            "name": "香蕉",
+            "value": 1053353.42
+        }
+    ],
+    "澳大利亚": [
+        {
+            "name": "豆饼",
+            "value": 852713.0
+        },
+        {
+            "name": "啤酒",
+            "value": 572949.33
+        },
+        {
+            "name": "预制菜",
+            "value": 496999.45
+        },
+        {
+            "name": "非酒精饮料",
+            "value": 266618.0
+        },
+        {
+            "name": "精米",
+            "value": 248999.0
+        },
+        {
+            "name": "大米",
+            "value": 230433.39
+        },
+        {
+            "name": "Undenatured ethyl alcohol",
+            "value": 207702.7
+        },
+        {
+            "name": "面点",
+            "value": 197565.11
+        },
+        {
+            "name": "Meat of pig boneless, fresh or chilled",
+            "value": 175575.27
+        },
+        {
+            "name": "Dog or cat food, put up for retail sale",
+            "value": 154647.0
+        }
+    ],
+    "美国": [
+        {
+            "name": "麦芽啤酒",
+            "value": 4767561.78
+        },
+        {
+            "name": "香蕉",
+            "value": 4614516.64
+        },
+        {
+            "name": "油菜饼",
+            "value": 2956658.0
+        },
+        {
+            "name": "非酒精饮料",
+            "value": 2449072.0
+        },
+        {
+            "name": "预制菜",
+            "value": 2390130.79
+        },
+        {
+            "name": "Raw cane or beet sugar",
+            "value": 2359703.82
+        },
+        {
+            "name": "面点",
+            "value": 2228849.02
+        },
+        {
+            "name": "Fruit prepared n.e.c.",
+            "value": 2096620.64
+        },
+        {
+            "name": "Rapeseed or canola oil, crude",
+            "value": 2087315.48
+        },
+        {
+            "name": "Apple juice, concentrated",
+            "value": 2050932.01
+        }
+    ],
+    "阿富汗": [
+        {
+            "name": "混合麦粉",
+            "value": 2349036.51
+        },
+        {
+            "name": "小麦",
+            "value": 733011.93
+        },
+        {
+            "name": "精米",
+            "value": 518928.0
+        },
+        {
+            "name": "碎米",
+            "value": 298483.0
+        },
+        {
+            "name": "棕榈油",
+            "value": 255211.59
+        },
+        {
+            "name": "马铃薯",
+            "value": 248851.76
+        },
+        {
+            "name": "Refined sugar",
+            "value": 217943.54
+        },
+        {
+            "name": "大米",
+            "value": 217632.74
+        },
+        {
+            "name": "Flour of maize",
+            "value": 158571.08
+        },
+        {
+            "name": "干豌豆",
+            "value": 101852.9
+        }
+    ]
+}

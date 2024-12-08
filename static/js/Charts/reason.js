@@ -13,6 +13,16 @@ async function fetchData() {
     }
 }
 
+const tooltip = d3.select("#reason-tooltip")
+    .style("position", "absolute")
+    .style("visibility", "hidden")
+    .style("background-color", "#333")
+    .style("color", "#fff")
+    .style("padding", "5px 10px")
+    .style("border-radius", "4px")
+    .style("font-size", "10px")
+    .style("z-index", "9999");
+
 async function create_reason_chart() {
     await fetchData();
     const chart = (() => {
@@ -62,7 +72,7 @@ async function create_reason_chart() {
 
         const svg = d3.create("svg")
             .attr("viewBox", [0, 0, width, height])
-            .attr("style", "max-width: 100%; height: auto; font: 10px sans-serif;"); // Adjust font size for readability
+            .attr("style", "max-width: 100%; height: auto; font: 10px sans-serif;");
 
         svg.append("g")
             .selectAll("g")
@@ -89,7 +99,8 @@ async function create_reason_chart() {
                 tooltip.style("visibility", "visible")
                     .text(`${d.data[0]}: ${formatValue(d[1] - d[0])} (${d.key})`)
                     .style("left", `${event.pageX + 8}px`)
-                    .style("top", `${event.pageY - 16}px`);
+                    .style("top", `${event.pageY - 16}px`)
+                    .style("z-index", "9999");
             })
             .on("mouseout", function (event, d) {
                 d3.select(this)
@@ -129,15 +140,6 @@ ${formatValue(value.get(key))} ${key}`);
             .call(g => g.selectAll(".tick").data(bias).attr("transform", ([name, min]) => `translate(${x(min)},${y(name) + y.bandwidth() / 2})`))
             .call(g => g.select(".domain").attr("transform", `translate(${x(0)},0)`));
 
-        const tooltip = d3.select("body").append("div")
-            .attr("class", "tooltip")
-            .style("position", "absolute")
-            .style("visibility", "hidden")
-            .style("background-color", "#333")
-            .style("color", "#fff")
-            .style("padding", "5px 10px")
-            .style("border-radius", "4px")
-            .style("font-size", "10px");
         return Object.assign(svg.node(), {scales: {color}});
     })();
     document.getElementById("reason").appendChild(chart);

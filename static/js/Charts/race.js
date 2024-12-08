@@ -8,7 +8,6 @@ async function fetchData() {
             throw new Error('网络响应不正常');
         }
         dataOri = await response.json();
-        console.log('获取到的 JSON 数据:', dataOri);
     } catch (error) {
         console.error('获取数据时发生错误:', error);
     }
@@ -17,7 +16,6 @@ async function fetchData() {
 async function create_hunger_svg() {
     await fetchData();
     dataOri = dataOri.map(obj => Object.values(obj));
-    console.log(dataOri);
     const width = 800, height = 400, margin = {top: 20, bottom: 0, left: 50, right: 100};
     const chartWidth = width - (margin.left + margin.right), chartHeight = height - (margin.top + margin.bottom);
     const data = [];

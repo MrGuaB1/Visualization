@@ -27,9 +27,10 @@
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./static/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./static/css/index.css">
-
+    <link rel="stylesheet" href="./static/css/card.css">
     <!--=============== JS ===============-->
     <script src="./static/js/d3.v7.js"></script>
 </head>
@@ -37,7 +38,7 @@
 <!--==================== HEADER ====================-->
 <header class="header" id="header">
     <nav class="nav container">
-        <a href="#" class="nav__logo">
+        <a href="#home" class="nav__logo">
             <img src="./static/img/logo.png" alt="logo" class="nav__logo-img">
             Visualization &nbsp; 全球食品安全与营养状况
         </a>
@@ -45,13 +46,13 @@
         <div class="nav__menu" id="nav-menu">
             <ul class="nav__list">
                 <li class="nav__item">
-                    <a href="#home" class="nav__link active-link">Cover</a>
-                </li>
-                <li class="nav__item">
                     <a href="#celebrate" class="nav__link">Trend</a>
                 </li>
                 <li class="nav__item">
                     <a href="#gift" class="nav__link">Reason</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#nur" class="nav__link">Nutrition</a>
                 </li>
                 <li class="nav__item">
                     <a href="#new" class="nav__link">Needs</a>
@@ -145,70 +146,105 @@
         <h2 class="section__title">
             Attribution of malnutrition <br> by age group
         </h2>
-        <div id="reason" style="width:100%;"></div>
+        <div style="width:100%;position: relative;" id="reason-box">
+            <div id="reason" style="width:100%;"></div>
+        </div>
     </section>
+
+    <!--==================== Nurtrition ====================-->
+    <section class="gift section container" id="nur">
+        <h2 class="section__title">
+            Foods to prevent disease
+        </h2>
+                <div class="new__container">
+                    <div class="swiper new-swiper">
+                        <div class="swiper-wrapper">
+                            <article class="new__card swiper-slide">
+                                <img src="./static/img/yanmai.png" alt="new-img" class="new__img" id="img1">
+                                <h3 class="new__price">燕麦</h3>
+                                <span class="new__title">谷物食品，可以帮助控制血糖波动</span>
+
+                                <button class="button new__button">
+                                    <i class="bx bx-heart new__icon"></i>
+                                </button>
+                            </article>
+
+                            <article class="new__card swiper-slide">
+                                <img src="./static/img/nut.png" alt="new-img" class="new__img" id="img2">
+                                <h3 class="new__price">坚果和种子</h3>
+                                <span class="new__title">含有健康脂肪和抗氧化物，有助于降低坏胆固醇</span>
+
+                                <button class="button new__button">
+                                    <i class="bx bx-heart new__icon"></i>
+                                </button>
+                            </article>
+
+                            <article class="new__card swiper-slide">
+                                <img src="./static/img/jxr.png" alt="new-img" class="new__img">
+                                <h3 class="new__price">鸡胸肉</h3>
+                                <span class="new__title">低糖低油脂的瘦肉，有效控制血糖</span>
+
+                                <button class="button new__button">
+                                    <i class="bx bx-heart new__icon"></i>
+                                </button>
+                            </article>
+                        </div>
+
+                    </div>
+                </div>
+    </section>
+
 
     <!--==================== NEEDS ====================-->
     <section class="new section container" id="new">
-        <h2 class="section__title">
-            Global Food Demand <br> And Needs
+        <h2 class="section__title" style="margin-bottom: 50px;">
+            Global Food Supply <br> And Needs
         </h2>
+        <div style="width: 100%;height: 450px;position: relative;">
+            <div style="width:45%;height:100%;display: inline-block;margin:auto;position: absolute;top: 0;left: 0;">
+                <h4 class="section__title">Imports</h4>
+                <div id="imports"></div>
+                <div id="infoCard" class="info-card">
+                    <div class="card-title">Item Name</div>
+                    <div class="card-value">Value: 0</div>
+                    <div class="card-close" onclick="closeCard()">×</div>
+                </div>
+            </div>
 
-<!--        <div class="new__container">-->
-<!--            <div class="swiper new-swiper">-->
-<!--                <div class="swiper-wrapper">-->
-<!--                    <article class="new__card swiper-slide">-->
-<!--                        <div class="new__overlay"></div>-->
+            <div style="width:45%;height:100%;display: inline-block;margin:auto;position: absolute;right: 0;top: 0;">
+                <h4 class="section__title">Exports</h4>
+                <div id="exports"></div>
+                <div id="infoCard_export" class="info-card">
+                    <div class="card-title">Item Name</div>
+                    <div class="card-value">Value: 0</div>
+                    <div class="card-close" onclick="closeCard_export()">×</div>
+                </div>
+            </div>
 
-<!--                        <img src="./static/img/new1.png" alt="new-img" class="new__img">-->
-<!--                        <h3 class="new__price">$95</h3>-->
-<!--                        <span class="new__title">Reindeer</span>-->
+            <!--玫瑰图元素个数调节按钮-->
+            <div id="toggleButton" style="position: absolute;right: 200px; top: -95px;">
+                <svg id="add" style="display: inline; float: left;"
+                        t="1733656969258" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1265" width="40" height="40"><path d="M505.96786702 1002.97801439c-268.90702124 0-487.61733332-218.76367227-487.6173334-487.61733342s218.71033462-487.56399525 487.6173334-487.56401765c268.8536609 0 487.56399525 218.71033462 487.56399555 487.56401765s-218.71033462 487.61733332-487.56399555 487.61733342z m0-944.9886485c-252.21035814 0-457.42465253 205.21429442-457.42465277 457.37131508 0 252.26369599 205.21429442 457.42465253 457.42465277 457.42463056s457.37129284-205.21429442 457.37131528-457.42463056c0-252.15699813-205.21429442-457.37129284-457.37131528-457.37131508z" p-id="1266" fill="#cdcdcd"></path><path d="M518.61039116 698.17050199v-170.11395915h170.16729692v-38.94110122h-170.16729692v-170.11395926h-38.94110114v170.11395926h-170.1139594v38.94110122h170.1139594v170.11395915z" p-id="1267" fill="#cdcdcd"></path></svg>
+                <svg id="sub" style="display: none; float: left;"
+                        t="1733657429796" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1472" width="40" height="40"><path d="M503.94505977 988.89094106c-268.8536609 0-487.61733332-218.76367227-487.61733357-487.61733304s218.76367227-487.56399525 487.61733357-487.56399585 487.61733332 218.71033462 487.61733324 487.56399585-218.76367227 487.61733332-487.61733324 487.61733304z m0-944.98864832c-252.26369599 0-457.42465253 205.16095692-457.42465304 457.37131528s205.21429442 457.37129284 457.42465304 457.37129289 457.37129284-205.21429442 457.37129281-457.37129289c0-252.21035814-205.16095692-457.37129284-457.37129281-457.37131528z" p-id="1473" fill="#cdcdcd"></path><path d="M644.98654346 614.78958967l-120.29068173-120.29068168 120.29068173-120.29068169-27.57883953-27.52547988-120.29068197 120.23732198-120.23732184-120.23732198-27.52550123 27.52547988 120.2373438 120.29068169-120.2373438 120.29068168 27.47214182 27.52550175 120.29068125-120.2906813 120.29068197 120.2906813z" p-id="1474" fill="#cdcdcd"></path>
+                </svg>
+            </div>
 
-<!--                        <button class="button new__button">-->
-<!--                            <i class="bx bx-heart new__icon"></i>-->
-<!--                        </button>-->
-<!--                    </article>-->
-
-<!--                    <article class="new__card swiper-slide">-->
-<!--                        <div class="new__overlay"></div>-->
-
-<!--                        <img src="./static/img/new2.png" alt="new-img" class="new__img">-->
-<!--                        <h3 class="new__price">$20</h3>-->
-<!--                        <span class="new__title">Snow Globe</span>-->
-
-<!--                        <button class="button new__button">-->
-<!--                            <i class="bx bx-heart new__icon"></i>-->
-<!--                        </button>-->
-<!--                    </article>-->
-
-<!--                    <article class="new__card swiper-slide">-->
-<!--                        <div class="new__overlay"></div>-->
-
-<!--                        <img src="./static/img/new3.png" alt="new-img" class="new__img">-->
-<!--                        <h3 class="new__price">$75</h3>-->
-<!--                        <span class="new__title">Sledge</span>-->
-
-<!--                        <button class="button new__button">-->
-<!--                            <i class="bx bx-heart new__icon"></i>-->
-<!--                        </button>-->
-<!--                    </article>-->
-
-<!--                    <article class="new__card swiper-slide">-->
-<!--                        <div class="new__overlay"></div>-->
-
-<!--                        <img src="./static/img/new4.png" alt="new-img" class="new__img">-->
-<!--                        <h3 class="new__price">$15</h3>-->
-<!--                        <span class="new__title">Christmas Wreath</span>-->
-
-<!--                        <button class="button new__button">-->
-<!--                            <i class="bx bx-heart new__icon"></i>-->
-<!--                        </button>-->
-<!--                    </article>-->
-<!--                </div>-->
-
-<!--                <div class="swiper-pagination"></div>-->
-<!--            </div>-->
-<!--        </div>-->
+            <!--地区筛选框-->
+            <div class="mb-3" style="position: absolute;left: 100px; top: -110px; float: left;">
+                <label for="regionSelector" class="form-label"></label>
+                <select id="regionSelector" class="form-select" style="width: 200px; background-color: #fff; border: 1px solid #ddd;">
+                    <option value="美国">美国</option>
+                    <option value="中国">中国</option>
+                    <option value="日本">日本</option>
+                    <option value="东非">东非</option>
+                    <option value="南非">南非</option>
+                    <option value="新加坡">新加坡</option>
+                    <option value="阿富汗">阿富汗</option>
+                    <option value="澳大利亚">澳大利亚</option>
+                </select>
+            </div>
+        </div>
     </section>
 
     <!--==================== THANKS ====================-->
@@ -310,6 +346,8 @@
 
 <!--=============== D3 Charts ===============-->
 <script src="static/js/Charts/race.js"></script>
+<script src="static/js/Charts/imports.js"></script>
+<script src="static/js/Charts/exports.js"></script>
 <script src="static/js/Charts/reason.js"></script>
 
 </body>
