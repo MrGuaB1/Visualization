@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="./static/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./static/css/index.css">
     <link rel="stylesheet" href="./static/css/card.css">
+
     <!--=============== JS ===============-->
     <script src="./static/js/d3.v7.js"></script>
 </head>
@@ -156,42 +157,50 @@
         <h2 class="section__title">
             Foods to prevent disease
         </h2>
-                <div class="new__container">
-                    <div class="swiper new-swiper">
-                        <div class="swiper-wrapper">
-                            <article class="new__card swiper-slide">
-                                <img src="./static/img/yanmai.png" alt="new-img" class="new__img" id="img1">
-                                <h3 class="new__price">燕麦</h3>
-                                <span class="new__title">谷物食品，可以帮助控制血糖波动</span>
-
-                                <button class="button new__button">
-                                    <i class="bx bx-heart new__icon"></i>
-                                </button>
-                            </article>
-
-                            <article class="new__card swiper-slide">
-                                <img src="./static/img/nut.png" alt="new-img" class="new__img" id="img2">
-                                <h3 class="new__price">坚果和种子</h3>
-                                <span class="new__title">含有健康脂肪和抗氧化物，有助于降低坏胆固醇</span>
-
-                                <button class="button new__button">
-                                    <i class="bx bx-heart new__icon"></i>
-                                </button>
-                            </article>
-
-                            <article class="new__card swiper-slide">
-                                <img src="./static/img/jxr.png" alt="new-img" class="new__img">
-                                <h3 class="new__price">鸡胸肉</h3>
-                                <span class="new__title">低糖低油脂的瘦肉，有效控制血糖</span>
-
-                                <button class="button new__button">
-                                    <i class="bx bx-heart new__icon"></i>
-                                </button>
-                            </article>
-                        </div>
-
+        <div style="position: relative">
+                <div class="new__container" style="margin-left:100px;">
+                    <div style="margin-right: 30px; height: 300px; display: inline-block;">
+                        <article class="new__card swiper-slide">
+                            <img src="./static/img/yanmai.png" alt="new-img" class="new__img" id="img1">
+                            <h3 class="new__price" id="p1">燕麦</h3>
+                            <span class="new__title" id="s1">谷物食品，可以帮助控制血糖波动</span>
+                            <button class="button new__button">
+                                <i class="bx bx-heart new__icon"></i>
+                            </button>
+                        </article>
+                    </div>
+                    <div style="margin-right: 30px; height: 300px; display: inline-block;">
+                        <article class="new__card swiper-slide">
+                            <img src="./static/img/nut.png" alt="new-img" class="new__img" id="img2">
+                            <h3 class="new__price" id="p2">坚果和种子</h3>
+                            <span class="new__title" id="s2">含有健康脂肪和抗氧化物，有助于降低坏胆固醇</span>
+                            <button class="button new__button">
+                                <i class="bx bx-heart new__icon"></i>
+                            </button>
+                        </article>
+                    </div>
+                    <div style="margin-right: 30px; height: 300px; display: inline-block;">
+                        <article class="new__card swiper-slide">
+                            <img src="./static/img/jxr.png" alt="new-img" class="new__img" id="img3">
+                            <h3 class="new__price" id="p3">鸡胸肉</h3>
+                            <span class="new__title" id="s3">低糖低油脂的瘦肉，有效控制血糖</span>
+                            <button class="button new__button">
+                                <i class="bx bx-heart new__icon"></i>
+                            </button>
+                        </article>
                     </div>
                 </div>
+            <div class="mb-3" style="position: absolute;left: 80px; top: -100px; float: left;">
+                <label for="illSelector" class="form-label"></label>
+                <select id="illSelector" class="form-select" style="width: 200px; background-color: #fff; border: 1px solid #ddd;">
+                    <option value="糖尿病">糖尿病</option>
+                    <option value="高血压">高血压</option>
+                    <option value="贫血">贫血</option>
+                    <option value="维生素A缺乏">维生素A缺乏</option>
+                    <option value="代谢综合征">代谢综合征</option>
+                </select>
+            </div>
+        </div>
     </section>
 
 
@@ -231,7 +240,7 @@
             </div>
 
             <!--地区筛选框-->
-            <div class="mb-3" style="position: absolute;left: 100px; top: -110px; float: left;">
+            <div class="mb-3" style="position: absolute;left: 80px; top: -110px; float: left;">
                 <label for="regionSelector" class="form-label"></label>
                 <select id="regionSelector" class="form-select" style="width: 200px; background-color: #fff; border: 1px solid #ddd;">
                     <option value="美国">美国</option>
@@ -287,15 +296,15 @@
 
             <ul class="footer__links">
                 <li>
-                    <a href="https://globalnutritionreport.org/resources/nutrition-profiles/"
-                       class="footer__link">Nutrition Report</a>
-                </li>
-                <li>
-                    <a href="https://www.fao.org/faostat/zh/#data/FS" class="footer__link">
+                    <a href="https://www.fao.org/faostat/zh/#data/FS" target="_blank" class="footer__link">
                         FAOSTAT</a>
                 </li>
                 <li>
-                    <a href="https://data.who.int/" class="footer__link">WHO</a>
+                    <a href="https://globalnutritionreport.org/resources/nutrition-profiles/"
+                       target="_blank" class="footer__link">Nutrition Report</a>
+                </li>
+                <li>
+                    <a href="https://data.who.int/" class="footer__link" target="_blank">WHO</a>
                 </li>
             </ul>
         </div>
@@ -305,13 +314,15 @@
 
             <ul class="footer__links">
                 <li>
-                    <a href="#" class="footer__link">FAQs</a>
+                    <a href="https://github.com/MrGuaB1/Visualization" class="footer__link" target="_blank">Codes</a>
                 </li>
                 <li>
-                    <a href="#" class="footer__link">Support Center</a>
+                    <a href="https://nankai.feishu.cn/wiki/DFBfwBW63isV3XkR6yXcH86Unvg?from=from_copylink"
+                       class="footer__link" target="_blank">Document</a>
                 </li>
                 <li>
-                    <a href="#" class="footer__link">Contact Us</a>
+                    <a href="https://jwcold.nankai.edu.cn/2023/0214/c5065a504469/page.htm"
+                       target="_blank" class="footer__link">Rest</a>
                 </li>
             </ul>
         </div>
@@ -349,6 +360,6 @@
 <script src="static/js/Charts/imports.js"></script>
 <script src="static/js/Charts/exports.js"></script>
 <script src="static/js/Charts/reason.js"></script>
-
+<script src="static/js/Charts/selector.js"></script>
 </body>
 </html>
